@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกข้อมูลพนักงาน</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* ปรับแต่งพื้นหลังและการจัดวางให้อยู่กึ่งกลางหน้าจอ */
+        body {
+            background-color: #f2eeec; /* สีพื้นหลังโทนอ่อนแบบในรูป */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* ปรับแต่งกล่อง Form (Card) */
+        .form-card {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* เงาบางๆ ให้ดูมีมิติ */
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* ปรับแต่งหัวข้อ */
+        .form-card h4 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* ปรับแต่ง Label ตัวหนา */
+        .form-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #222;
+        }
+
+        /* ปรับแต่งปุ่ม Submit สีเขียว */
+        .btn-submit {
+            background-color: #28a745;
+            border: none;
+            padding: 10px;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+        
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h4>บันทึกข้อมูลพนักงาน</h4>
+        <form>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="position" class="form-label">Position</label>
+                <select class="form-select" id="position">
+                    <option selected>Manager</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="hr">HR</option>
+                </select>
+            </div>
+            
+            <div class="mb-4">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phoneNumber" required>
+            </div>
+            
+            <button type="submit" class="btn btn-submit w-100 text-white">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
